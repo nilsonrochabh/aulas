@@ -3,22 +3,29 @@
 <html lang="pt_br">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="cor em hexadecimal">
-    
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="juventude Negra">
     <meta name="author" content="Nilson Rocha">
-    <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/img/favicon.ico">
-
-
-    <title>Reaja - ProJovem</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.1/examples/carousel/carousel.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+        
+<script>    
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+    .then(reg => console.info('registered sw', reg))
+    .catch(err => console.error('error registering sw', err));
+  }
+  </script>
+
+    <title>Reaja - ProJovem</title>
+
   </head>
   <body>
 
@@ -30,6 +37,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="leiseca.html">Leis ECA</a>
+                </li>
           
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,25 +48,18 @@
                     <a class="dropdown-item" href="lugardepaz.html">Lugar de Paz</a>
                     <a class="dropdown-item" href="perifericos.html">Periféricos</a>
                     <a class="dropdown-item" href="genocidio.html">Genocídio</a>
-                  <!-- <div class="dropdown-divider"></div> -->
-                   <!--  <a class="dropdown-item" href="#">Algo mais aqui</a> -->
+               
                   </div>
                 </li>
-             <li class="nav-item">
-              <a class="nav-link" href="leiseca.html">Leis ECA</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link" href="mapeamento.html">Mapeamento</a>
-            </li>
-               <li class="nav-item dropdown">
+             
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Produções</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="videos.html">Videos</a>
-                    <a class="dropdown-item" href="imagens.html">Imagens</a>
-                    <a class="dropdown-item" href="musicas.html">musicas</a>
-                  <!-- <div class="dropdown-divider"></div> -->
-                   <!--  <a class="dropdown-item" href="#">Algo mais aqui</a> -->
+                      <a class="dropdown-item" href="videos.html">Vídeos</a>
+                      <a class="dropdown-item" href="imagens.html">Imagens</a>
+                      <a class="dropdown-item" href="musicas.html">Músicas</a>
+               
                   </div>
                 </li>
            <li class="nav-item">
@@ -71,54 +74,8 @@
     </header>
 
     <main role="main">
-
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="#" alt="Rosa Leao">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Ocupação Rosa Leão .</h1>
-                <p>Aqui podemos colocar algum texto sobre a ocupação Rosa Leão e ...... </p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Clique aqui para saber mais...</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="#" alt="CRAS Zila">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Aqui podemos falar sobre o CRAS e o grupo que esta elaborando o trabalho...</h1>
-                <p>Cras Zila, os jovens que estão fazendo o trabalho....</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Clique aqui para mais informações </a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="" alt="Genocídio">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>Genocídio da Juventude Negra.</h1>
-                <p>Aqui podemos falar um pouco sobre esse problema .</p>
-                <p><a class="btn btn-lg btn-primary" href="genocidio.html" role="button">Saíba mais </a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Proximo</span>
-        </a>
-      </div>
+  <img src="img/05.jpeg" class="img-fluid" alt="Responsive image" >
+      
 
 
       <!-- Marketing messaging and featurettes
@@ -134,9 +91,9 @@
         <div class="row featurette" id="perifericos">
           <div class="col-md-12 order-md-2">
             <h2 class="featurette-heading" >Apresentação: </h2>
-            <p class="lead" align="justify">O Projovem é um serviço de convivênia e de fortalecimento de laços realizado pelo Grupo de Desenvolvimento Comunitário – GDECOM em parceria com a Prefeitura de Belo Horizonte e o equipamento municipal CRAs Zilah Spósito. O serviço atende jovens de 14 à 17 anos e moradores de áreas de vulnerabilidade social.</p>
-            <p class="lead" align="justify"> E foi assim que nasceu este material, uma cartilha que surge das rodas de conversa e orientação social sobre genocídio da juventude negra, ocorridas no coletivo Zilah Spósito, como preparação para a Pré-Conferência dos direitos da criança e do adolescente 2018. Esta Pré-conferência teve seu tema escolhio pelos jovens e se desenvolveu a partir das parcerias do Projovem, Cras Zilah Spósito e Escola Municipal Daniel Alvarenga. O conteúdo construido por meio desses diálogos nos direcionou para a necessidade em tornar público todo conhecimento e experiêcia desta vivência como um material informativo para a comunidade do território em questão.</p>
-            <p class="lead" align="justify">Com este material espera-se provocar na comunidade os sentimentos de pertença e de militancia fazendo uso de seus direitos garantidos pelas leis e que, na prática, são usurpados. Quem sabe consigamos aumentar o número de jovens atuando nas várias instâncias de serviços e equipamentos direcionados para as juventudes.</p>
+            <p class="text-justify">O Projovem é um serviço de convivênia e de fortalecimento de laços realizado pelo Grupo de Desenvolvimento Comunitário – GDECOM em parceria com a Prefeitura de Belo Horizonte e o equipamento municipal CRAs Zilah Spósito. O serviço atende jovens de 14 à 17 anos e moradores de áreas de vulnerabilidade social.</p>
+            <p class="text-justify"> E foi assim que nasceu este material, uma cartilha que surge das rodas de conversa e orientação social sobre genocídio da juventude negra, ocorridas no coletivo Zilah Spósito, como preparação para a Pré-Conferência dos direitos da criança e do adolescente 2018. Esta Pré-conferência teve seu tema escolhio pelos jovens e se desenvolveu a partir das parcerias do Projovem, Cras Zilah Spósito e Escola Municipal Daniel Alvarenga. O conteúdo construido por meio desses diálogos nos direcionou para a necessidade em tornar público todo conhecimento e experiêcia desta vivência como um material informativo para a comunidade do território em questão.</p>
+            <p class="text-justify">Com este material espera-se provocar na comunidade os sentimentos de pertença e de militancia fazendo uso de seus direitos garantidos pelas leis e que, na prática, são usurpados. Quem sabe consigamos aumentar o número de jovens atuando nas várias instâncias de serviços e equipamentos direcionados para as juventudes.</p>
           </div>
         </div>
 
@@ -158,85 +115,23 @@
         </div>
 
         <hr class="featurette-divider">
-
-            <div class="col-md-12">
-            <h2 class="featurette-heading" >Os Emocionados </h2>
-          
-
-      <div class="container marketing">
-      <div>
-      
-
-
-<p align="justify">O Coletivo Zilah Spósito é formado por jovens moradores do bairro Zilah Spósito e ocupação Rosa Leão. É um grupo composto por jovens de idade entre 14 a 18 anos e é caracterizado pela emoção, por isso se autodeclaram como “Os Emocionados”. Uma nomenclatura que deriva da capacidade de escuta e acolhida que vem se desenvolvendo e consolidando como algo positivo no dia-a-dia do coletivo. Cada jovem com sua história e dificuldade tem desenhado um trilhar afetuoso para nosso convívio. Como resultado temos bons frutos em forma de trabalhos manuais e na formação de sujeitos humanos e capazes alegrar todo o ambiente em volta. 
-      
-        
-      </p>  
-      </div>
-                </div>
-  
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-3">
-            <img class="rounded-circle" src="img/Italo.jpeg" alt="Imagem Jovem" width="140" height="140">
-            <h2>Italo</h2>
-           
-            <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-          </div><!-- /.col-lg-3 -->
-          <div class="col-lg-3">
-            <img class="rounded-circle" src="img/camilly.jpeg" alt="Imagem Jovem" width="140" height="140">
-           <h2>Camilly</h2>
-           
-            <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            
-          </div><!-- /.col-lg-3 -->
-             <div class="col-lg-3">
-            <img class="rounded-circle" src="img/carlos.jpeg" alt="Imagem Jovem" width="140" height="140">
-            <h2>Carlos </h2>
-           
-            <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            
-          </div><!-- /.col-lg-3 -->
-          <div class="col-lg-3">
-              <img class="rounded-circle" src="img/clara.jpeg" alt="Imagem Jovem" width="140" height="140">
-              <h2>Clara</h2>
-              
-              <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            </div>
-         <div class="col-lg-3">
-              <img class="rounded-circle" src="img/erico.jpeg" alt="Imagem Jovem" width="140" height="140">
-             <h2>Erico</h2>
-             
-              <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            </div><!-- /.col-lg-3 -->
-
-        <div class="col-lg-3">
-              <img class="rounded-circle" src="img/maycon.jpeg" alt="Imagem Jovem" width="140" height="140">
-             <h2>Maycon</h2>
-             
-              <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            </div><!-- /.col-lg-3 --> 
-
-          <div class="col-lg-3">
-              <img class="rounded-circle" src="img/junior.jpeg" alt="Imagem Jovem" width="140" height="140">
-             <h2>Junio</h2>
-             
-              <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            </div><!-- /.col-lg-3 -->
-
-          <div class="col-lg-3">
-            <img class="rounded-circle" src="img/sabrina.jpeg" alt="Imagem Jovem" width="140" height="140">
-            <h2>Sabrina</h2>
-            
-            <p><a class="btn btn-secondary" href="somos.html" role="button">Saíba Mais  &raquo;</a></p>
-            
-          </div><!-- /.col-lg-3 -->   <!-- /.col-lg-3 -->
           
         </div><!-- /.row -->
-
-        <!-- /END THE FEATURETTES -->
-      <hr class="featurette-divider">
-      </div><!-- /.container -->
+        <div class="card">
+            <div class="card-header">
+              Musicas 
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Quem criou a musica ?</h5>
+              <p class="card-text">Processo de criação ou letra  . . . .</p>
+              <audio controls loop>
+                  <source src="https://archive.org/download/Track4_201903/Track%201.mp3" type="audio/mpeg">
+                    <source src="https://archive.org/download/Track4_201903/Track%202.mp3" type="audio/mpeg">
+                 Seu Browser não tem suporte para Musica :)
+                </audio>
+              </div>
+          </div>
+          
 
 
       <!-- FOOTER -->
@@ -255,10 +150,16 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/holder.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    
+
   </body>
 </html>
