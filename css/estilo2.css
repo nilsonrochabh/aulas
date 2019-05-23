@@ -54,7 +54,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fdf54ffa; !important
+    background-color: #ff9c00; !important
 }
 .jumbotron {
     padding: 2rem 1rem;
@@ -63,16 +63,16 @@ body {
     border-radius: .3rem;
 }
 .container1 {
-    border: 2px solid #cc7979; !important
-    background-color: #ccafaf; !important
+    border: 2px solid #cc7979 !important;
+    background-color: #ccafaf !important;
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
 }
 .nav-tabs .nav-link.active {
-    color: #495057;
-    background-color: #fff;
-    border-color: #cc7979 #cc7779 #cc7979; !important
+    color: #000000;
+    background-color: #ffd000;
+    border-color: #cc7979 #cc7779 #cc7979 !important;
 }
 
 .subTitle{
@@ -88,7 +88,17 @@ body {
 /* somos*/
 .marketing .col-lg-4 {
     border: solid;
-        border-color: #900;
+        border-color: transparent;
 
 }
-/* Musicas*/
+/* ECA*/
+.nav-tabs .nav-link {
+    border: 1px solid #900;
+}
+.nav-item nav-link{
+    color: #900;
+}
+.container1 {
+    
+    background-color: #FFD000 !important;
+}
