@@ -114,4 +114,10 @@ body {
 }
 .bg-danger {
     background-color: #000 !important;
+}/* card pastas IMG*/
+.cardIMG{
+    background-color: transparent !important;
+    border-color: transparent !important;
+ 
+}
 }
