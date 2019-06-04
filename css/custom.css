@@ -76,7 +76,7 @@ body {
         color: #fff;
 }
 .btn-outline-secondary {
-    color: #bd2130;
+    color: #fff;
 }
 /* somos*/
 .marketing .col-lg-4 {
@@ -120,10 +120,7 @@ body {
     border-color: transparent !important;
  
 }
-.card-body {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+.genocidio {
     padding: 1.25rem;
     max-width: 420px;
     max-height: 380px;
@@ -133,4 +130,12 @@ body {
         color: #ec3333;
 }
 /*textos*/
-.recuo { text-indent:4em }
+.recuo { text-indent:4em 
+}
+/* mudicas*/
+.musicas{
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    
+}
