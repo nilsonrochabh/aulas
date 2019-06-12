@@ -21,7 +21,54 @@
 
 
 
-</head>
+<script type="text/javascript" language="javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+// Quando carregar a página
+$(function($) {
+       
+    // Quando clicado em uma imagem das caixas
+    $('div.box button').click(function() {
+        // Recuperando ID da DIV da qual a imagem se encontra
+        var id = $(this).parent('div').attr('id');
+        // Armazendo elemento que será oculto
+        var conteudo = $('#'+id+' p.conteudo');
+        // Escondendo ou exibindo o conteúdo do box
+        conteudo.slideToggle(function() {
+            // Caso a box esteja vísivel
+            if (conteudo.css('display') == 'block')
+                // Cria um cookie que recebe o ID do elemento como nome e o valor 1
+                $.cookie(id, 1, {expires: 365});
+            // Caso esteja oculta
+            else
+                 // Cria um cookie que recebe o ID do elemento como nome e o valor 0
+                $.cookie(id, 0, {expires: 365});
+        });
+    });
+    
+// Procurando e passando por cada box da página
+$("body").find("div.box").each(function(){
+    // Recuperando ID
+  var id = $(this).attr('id');
+    // Armazendo elemento que será oculto
+    var conteudo = $('#'+id+' p.conteudo');
+    // Caso ele não tenha sido criado
+  if ($.cookie(id) == null)
+        // Ocultamos
+        conteudo.css("display", "none");
+    // Se um cookie foi criado e está com 1, ou seja, visível
+  else if ($.cookie(id) == 1)
+        // Exibimos
+        conteudo.css("display", "block");
+    // Se um cookie foi criado e está com 0, ou seja, oculto
+    else if ($.cookie(id) == 0)
+        // Ocultamos
+        conteudo.css("display", "none");
+});
+    
+});
+
+</script>
 
 <body>
 <header>
@@ -89,11 +136,15 @@
       <div class="row">
 
            <div class="col-md-4 p-3">
-            <div class="card box-shadow">
+            <div class="card box-shadow genocidio"">
              
-                <div class=" genocidio card-body">
+                  <div id="texto1" class="box"> 
+                   <button type="button" class="btn btn-danger"> Mostar relato completo </button>
                    <p class="card-text text-justify lead"><i>
-                   Quando tratamos de genocídio falamos de fatos não resolvidos. Assistimos a um país repleto de desigualdade social e racial. Genocídio é quando um grupo de pessoas é morto e, na maioria das vezes, estes são jovens negros. Genocídio é se deparar com um morto na rua e a primeira pergunta que se faz é se ele estava roubando ou vendendo drogas. <br />
+                   Quando tratamos de genocídio falamos de fatos não resolvidos. Assistimos a um país repleto de desigualdade social e racial. 
+                   Genocídio é quando um grupo de pessoas é morto e, na maioria das vezes, estes são jovens negros.</p>    
+                              
+                   <p class="conteudo card-text text-justify lead"">Genocídio é se deparar com um morto na rua e a primeira pergunta que se faz é se ele estava roubando ou vendendo drogas. <br />
 
                    Essas vítimas, negros, pobres e periféricos, convivem com a falta de oportunidade para mudar de vida, vivendo em uma comunidade rica em talentos, mas que são desperdiçados por não terem espaço para ingressar com mais facilidade numa faculdade. Somos uma população que vive insegura e que anda nas ruas com medo de ser confundido com um bandido.
                     <br/>
@@ -102,7 +153,8 @@
 
                 </p></i>
                 <div class="btn-group">
-              <a href="somos.html" style="text-decoration: none; color:black;">     <button type="button" class="btn btn-sm btn-outline-secondary">Carlos Edriano de Olveira Carvalho, 17 anos</button> 
+              <a href="somos.html" style="text-decoration: none; color:black;">   
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Carlos Edriano de Olveira Carvalho, 17 anos</button> 
               </a>
 
                   
@@ -114,26 +166,33 @@
              
      
         <div class="col-md-4 p-3 ">
-          <div class="card box-shadow">
+          <div class="card box-shadow genocidio">
 
-            <div class=" genocidio card-body">
+            <div id="texto2" class="box">
+            
+            <button type="button" class="btn btn-danger"> Relato completo </button>
 
               <p class="card-text text-justify lead"><i>
               
-                O genocídio da juventude negra é uma violência contra os jovens da periferia, pobres, e negros. A cada 23 minutos morre um jovem negro, diz a música “Favela vive 3”. Isso acontece porque nossos direitos são cortados. O governo não garante, na prática, nosso direito de ir e vir, levando muitos jovens a procurar, no tráfico de drogas, uma saída. E os pais, preocupados, ficam com a insegurança e a incerteza se seus filhos vão voltar com vida pra casa. <br />
-             Para alterar esta situação algumas medidas precisam ser tomadas, tais como uma educação de qualidade, um sistema de saúde que atenda toda a população e a segurança nas ruas. É preciso dar segurança a toda a população honesta e batalhadora que luta dia a dia pelos seus direitos e por uma vida digna que todo ser humano deveria ter. Pois essas pessoas honestas não conseguem mais que o pão de cada dia para sustentar suas famílias. Assim, todos os jovens, crianças, idosos e etc. poderão andar tranquilamente nas ruas, sem medo de ir para seu trabalho e sem a preocupação de voltar vivo, ou não, para casa. 
+                O genocídio da juventude negra é uma violência contra os jovens da periferia, pobres, e negros. A cada 23 minutos morre um jovem negro, diz a música “Favela vive 3”. Isso acontece porque nossos direitos são cortados. </p>
+                <p class="conteudo card-text text-justify lead"> 
+                 O governo não garante, na prática, nosso direito de ir e vir, levando muitos jovens a procurar, no tráfico de drogas, uma saída. E os pais, preocupados, ficam com a insegurança e a incerteza se seus filhos vão voltar com vida pra casa. 
+                <br />
+                   Para alterar esta situação algumas medidas precisam ser tomadas, tais como uma educação de qualidade, um sistema de saúde que atenda toda a população e a segurança nas ruas. É preciso dar segurança a toda a população honesta e batalhadora que luta dia a dia pelos seus direitos e por uma vida digna que todo ser humano deveria ter. Pois essas pessoas honestas não conseguem mais que o pão de cada dia para sustentar suas famílias. Assim, todos os jovens, crianças, idosos e etc. poderão andar tranquilamente nas ruas, sem medo de ir para seu trabalho e sem a preocupação de voltar vivo, ou não, para casa. 
               <br />
               Outra medida importante a ser tomada é o acesso aos cursos profissionalizantes para os jovens de periferias. Dessa forma teríamos condições de buscar um futuro profissional e, com isso, o número de jovens mortos poderia diminuir.  
-              <br />O governo deveria criar penas mais justas para todos os crimes, fazendo o certo pelo certo. E não fazendo leis que acobertam seus crimes gerando mais corrupção para nosso país. O governo deveria fazer isso e muito mais para que o pobre tenha uma vida digna e, também, deveria ter mais espaços como o PROJOVEM para os jovens poderem frequentar.
+              <br />O governo deveria criar penas mais justas para todos os crimes, fazendo o certo pelo certo. E não fazendo leis que acobertam seus crimes gerando mais corrupção para nosso país. O governo deveria fazer isso e muito mais para que o pobre tenha uma vida digna e, também, deveria ter mais espaços como o PROJOVEM para os jovens poderem frequentar.</p>
 
               </p></i>
             
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                            <a href="somos.html" style="text-decoration: none; color:black;"> <button type="button" class="btn btn-sm btn-outline-secondary">Clara Aléxia dos Reis Moreira, 15 anos</button> </a>
+                  <a href="somos.html" style="text-decoration: none; color:black;"> 
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Clara Aléxia dos Reis Moreira, 15 anos</button> </a>
+
                   
-                </div> <small class="text-muted">18/10/2018</small>
-               </div> 
+                </div> 
+               </div> <small class="text-muted">18/10/2018</small>
       
                       
             </div>
@@ -143,12 +202,19 @@
 
 
         <div class="col-md-4 p-3">
-          <div class="card box-shadow">
-            <div class=" genocidio  card-body">
+          <div class="card box-shadow genocidio">
+            <div class="box" id="texto3">
+
+            <button type="button" class="btn btn-danger"> Relato completo </button>
+
+              
 
               <p class="card-text text-justify lead"> <i>
-              O genocídio da juventude negra acontece com as pessoas pobres, negras e moradoras de periferia. Aqui no meu bairro os policiais trocam a conversa com os moradores pela agressão, batendo e matando, mais não são só os policiais que matam. O tráfico de drogas e os bandidos também fazem isso.
-              <br /> 
+              O genocídio da juventude negra acontece com as pessoas pobres, negras e moradoras de periferia. Aqui no meu bairro os policiais trocam a conversa com os moradores pela agressão, batendo e matando, mais não são só os policiais que matam.</p> 
+               <p class="conteudo card-text text-justify lead">  
+              O tráfico de drogas e os bandidos também fazem isso.
+              
+              
               As maiorias das vítimas são pobres que moram na favela e, em sua maioria, são negras. Uma coisa que eu sempre quis saber é porque os policiais tratam as pessoas não negras de maneira diferente. Negro e branco são pessoas com os mesmos direitos. 
               <br />
               Eu penso assim por já ter presenciado uma situação em que dois amigos meus, um branco e um negro, sentados na praça conversando, foram abordados por policiais em uma S10. Somente meu amigo negro foi abordado e o outro foi liberado. Eu acho isso uma grande falta de respeito com o ser humano.
@@ -170,13 +236,14 @@
 
 
         <div class="col-md-4 p-3">
-          <div class=" genocidio  card box-shadow">
+          <div class="genocidio  card box-shadow">
           
-            <div class="card-body">
+            <div class="box" id="texto4">
               
+              <button type="button" class="btn btn-danger"> Relato completo </button>
               <p class="card-text text-justify lead"><i>
-              O genocídio da juventude negra é uma violência não somente física, mas também verbal. O genocídio é uma violência cultural, com nosso jeito de vestir.
-              <br />Isso acontece na quebrada com a maioria dos negros, os policiais chegam e abordam um negro por conta de sua vestimenta, que julga aparentar ser de bandido.
+              O genocídio da juventude negra é uma violência não somente física, mas também verbal. O genocídio é uma violência cultural, com nosso jeito de vestir. </p>
+              <p class="conteudo text-justify lead">Isso acontece na quebrada com a maioria dos negros, os policiais chegam e abordam um negro por conta de sua vestimenta, que julga aparentar ser de bandido.
 
                <br />Os homens por usar um bermudão, um boné e uma blusa logo são identificados pelos policiais como vendedores de droga ou bandidos. Sendo que os bandidos quase sempre usam terno, gravata e alguns estão na política de nosso Brasil. As mulheres também sofrem muito com a violência cultural e, só por estar usando um short curto, muitas são violentadas.  
                <br />
@@ -186,8 +253,8 @@
                 <div class="btn-group">
             <a href="somos.html" style="text-decoration: none; color:black;">        <button type="button" class="btn btn-sm btn-outline-secondary">Maycon Douglas Carvalho de Lima, 17 anos  </button></a>
                   
-                </div> <small class="text-muted">23/09/2018</small>
-              </div>
+                </div> 
+              </div><small class="text-muted">23/09/2018</small>
             
             </div>
           </div>
@@ -195,12 +262,14 @@
 
 
         <div class="col-md-4 p-3">
-          <div class="card box-shadow">
+          <div class="card box-shadow  genocidio ">
           
-            <div class=" genocidio card-body">
+            <div class="card-body box" id="texto5">
+            <button type="button" class="btn btn-danger"> Relato completo </button>
               <p class="card-text text-justify lead"><i>
  				       Já ouviram falar na expressão genocídio da juventude negra? Genocídio da juventude negra é um extermínio da uma população por terem certas características como morar em periferia, classe social, ser negro, ser LGBT+, entre outros.
-               <br />
+               </p>
+               <p class="conteudo text-justify lead">
  				       Infelizmente, até hoje, estamos sofrendo com o racismo, preconceito e o genocídio, e muitas pessoas não sabem ou ignoram isso por não ser retratados pelas grandes mídias. Mas isso não pode ser ignorado por nós cidadãos, pelo contrário, isso tem que acabar. Porque que as vítimas desse horror histórico, chamado genocídio da juventude negra, somos todos nós que vivemos em periferias e que somos negros. 
                <br />
                Passamos por isso todo dia, estamos morrendo tão rápido, mas ninguém está percebendo ou não quer enxergar. E parece que em vez de combatermos isso, estamos pioramos cada vez mais. 
@@ -214,8 +283,8 @@
                 <div class="btn-group">
             <a href="somos.html" style="text-decoration: none; color:black;">        <button type="button" class="btn btn-sm btn-outline-secondary">Vitória Michele de Souza Neves, 15 anos</button></a>
                   
-                </div> <small class="text-muted">25/09/2018</small>
-              </div>
+                </div> 
+              </div><small class="text-muted">25/09/2018</small>
               
             </div>
           </div>
@@ -242,6 +311,10 @@
     <script src="js/popper.min.js"></script>	    
     <script src="js/bootstrap.min.js"></script>
     <script src="js/holder.min.js"></script>
+
+
+
+</head>
     
 </body>
 
